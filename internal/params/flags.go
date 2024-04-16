@@ -233,6 +233,7 @@ const (
 	APISecurityLabel     = "API Security"
 	ScaType              = "sca"
 	APISecType           = "apisec"
+	ScsType              = "scs"
 	Success              = "success"
 )
 
