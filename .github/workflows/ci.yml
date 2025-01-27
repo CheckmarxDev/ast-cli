@@ -16,6 +16,7 @@ jobs:
       - run: go version
       - name: go test with coverage
         run: |
+          docker info
           sudo chmod +x ./internal/commands/.scripts/up.sh
           ./internal/commands/.scripts/up.sh
       - name: Check if total coverage is greater then 79.9
@@ -174,7 +175,7 @@ jobs:
         env:
           TRIVY_SKIP_DB_UPDATE: true
           TRIVY_SKIP_JAVA_DB_UPDATE: true
-      
+
       - name: Inspect action report
         if: always()
         shell: bash
